@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+
+}
+
+/* menu style*/
+.navbar{
+    position: fixed;
+    width:100%;
+    padding: 30px 0;
+    font-family: 'Raleway', sans-serif;
+    transform: all 0.4s ease;
+    z-index: 20;
+    
+
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background:rgb(12, 11, 11);
+
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar .logo a{
+    color:rgb(255, 255, 255);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color:red;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img {
+    width: 50px; /* dimensione logo */
+    height: auto;
+    margin-right: 10px; /* spazio tra immagine e testo */
+    border-radius: 50%; /* se vuoi il logo rotondo */
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+
+.navbar .menu li a{
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: color 0.4s ease;
+    position: relative;
+}
+
+.navbar .menu li a:hover{
+    color: rgb(219, 0, 0);
+}
+
+.navbar .menu li a::after{
+    content:"";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0%;
+    left:0;
+    bottom:-10px;
+    transition: ease .40s;
+}
+
+.navbar .menu li a:hover::after{
+    width:100%;
+}
+
+
+/*menu button style*/
+.menu-btn{
+    color:#fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* home section style */
+
+.homeIndex{
+    display: flex;
+    background: black;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.homeIndex .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.homeIndex .max-width .text-1{
+    font-size: 27px;
+}
+
+.homeIndex .max-width .text-2{
+    font-size: 70px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.homeIndex .max-width .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.homeIndex .max-width .text-1 span{
+    color: red;
+}
+
+.homeIndex .max-width .text-2 span{
+    color: red;
+}
+
+.homeIndex .max-width .text-3 span{
+    color: red;
+}
+
+.social_links ul{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social_links ul li{
+    list-style: none;
+    margin: 0 10px;
+
+}
+
+.social_links ul li .fa{
+
+    font-size: 28px;
+    line-height: 58px;
+    transition: .6s;
+    color:rgb(216, 4, 4);
+    z-index: -50;
+}
+
+.social_links ul li a{
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(14, 12, 12);
+    text-align: center;
+    transition: .5s;
+    box-shadow: 0 5px 4px rgb(216, 5, 5,.7); 
+
+}
+
+
+.social_links ul li a:hover{
+    background-color:#fff;
+    transform: translate(0,-12px);
+    box-shadow: 0 5px 4px rgba(173, 138, 138, 0.7); 
+}
+
+.social_links ul li .fa:hover{
+    color:black;
+}
+
+
+.repository{
+    display: flex;
+    background: black;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 100px;
+
+}
+
+.repository-content .exerciseX{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.exerciseX{
+    background: rgb(8, 8, 8);
+    border-radius: 10px;
+    height: 120px;
+    text-align: left;
+}
+.exerciseX p{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right : 20px;
+}
+
+.repository .titleRepository{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.repository .titleRepository::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    width:180px;
+    height: 3px;
+    background:rgb(175, 0, 0);
+    transform: translateX(-50%);
+   
+}
+
+.repository .titleRepository::after{
+    content: "esercizi";
+    position: absolute;
+    font-size:20px;
+    bottom: -14px;
+    left:50%;
+    padding:5px;
+    background:black;
+    color:rgb(175, 0, 0);
+    transform: translateX(-50%);
+   
+}
+
+
+
+.accessExercise{
+    display:flex;
+    color:white;
+    align-items: center;
+    justify-content: space-around;
+    width:25%;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left:20px;
+    padding-top:14px;   
+}
+
+.exerciseX{
+    height:130px;
+}
+
+.accessExercise a{
+    background:rgb(17, 17, 17);
+    height: 36px;
+    width:90px;
+    text-align: center;
+    color:rgb(163, 0, 0); 
+    padding-top:5px;
+    border-radius: 7px;
+    box-shadow: 0 5px 4px rgba(161, 0, 0, 0.7); 
+    transition: all .3s ease;
+    font-size: 17px;
+}
+
+.accessExercise a:hover{
+    transform: scale(1.05);
+    background: white;
+    color:black;
+    transform: translate(0,-8px);
+    box-shadow: 0 5px 4px rgba(255, 255, 255, 0.4); 
+}
+
+/*footer styling*/
+footer{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    background:#111;
+    padding:10px;
+    font-size:18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+footer a{
+    color: rgb(165, 0, 0);
+    
+}
+
+
+/* media query */
+
+
+@media (max-width:1104px){
+    .homeIndex .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:1050px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height:100vh;
+        width:100%;
+        background: black;
+        left:-100%;
+        top:0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.4s ease;
+    }
+
+    
+
+    .navbar .menu.active{
+        left:0;
+    }
+
+    .social_links.active{
+        position: fixed;
+        height:100vh;
+        width:100%;
+        background: black;
+        left:-100%;
+        top:0;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+
+
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 65px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 35px;
+    }
+
+    
+}
+
+
+@media (max-width:991px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 26px;
+        line-height: 56px;
+    }
+    
+    .social_links ul li a{
+        width: 53px;
+        height: 53px;
+    }
+}
+
+
+@media (max-width:963px){
+
+    .accessExercise{
+        width:30%;
+    }
+}
+
+@media (max-width:947px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 65px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 35px;
+    }
+}
+
+
+@media (max-width:844px){
+    .exerciseX{
+        height:150px;
+    }
+
+    .repository .titleRepository{
+        font-size: 35px;
+    }
+
+    .repository .titleRepository::after{
+        font-size: 17px;
+       
+    }
+
+    footer{
+        font-size: 15px;
+    }
+
+    .accessExercise{
+        width:35%;
+    }
+}
+
+@media (max-width:727px){
+
+    .accessExercise{
+        width:40%;
+    }
+}
+
+
+@media (max-width:690px){
+
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 60px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 32px;
+    }
+    .social_links ul li .fa{
+
+        font-size: 24px;
+        line-height: 54px;
+    }
+    
+    .social_links ul li a{
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
+
+@media (max-width:638px){
+
+    .accessExercise{
+        width:45%;
+    }
+
+    .accessExercise a{
+        height: 34px;
+        width:80px;
+        font-size: 15px;
+    }
+}
+
+
+
+@media (max-width:606px){
+    .exerciseX{
+        height:180px;
+    }
+
+    .repository .titleRepository{
+        font-size: 32px;
+    }
+
+    .repository .titleRepository::after{
+        font-size: 17px;
+       
+    }
+}
+
+@media (max-width:519px){
+
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 50px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 27px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 22px;
+        line-height: 52px;
+    }
+    
+    .social_links ul li a{
+        width: 48px;
+        height: 48px;
+    }
+
+    .accessExercise{
+        width:50%;
+    }
+
+}
+
+@media (max-width:490px){
+
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 50px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 27px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 22px;
+        line-height: 52px;
+    }
+    
+    .social_links ul li a{
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width:474px){
+    .exerciseX{
+        height:210px;
+    }
+
+}
+
+
+@media (max-width:438px){
+    .accessExercise{
+        width:55%;
+    }
+
+    .homeIndex .max-width .text-1{
+        font-size: 25px;
+   }
+   
+   .homeIndex .max-width .text-2{
+        font-size: 45px;
+   }
+   .homeIndex .max-width .text-3{
+       font-size: 25px;
+   }
+
+}
+
+
+@media (max-width:410px){
+    .logo-write{
+        font-size:30px;
+    }
+
+    .logo-img {
+        width: 40px; /* dimensione logo */
+    }
+}
+
+
+@media (max-width:400px){
+    .accessExercise{
+        width:60%;
+    }
+
+    .repository .titleRepository{
+        font-size: 28px;
+    }
+
+    .repository .titleRepository::after{
+        font-size: 15px;
+       
+    }
+
+    .repository .titleRepository::before{
+        height:2px;
+    }
+
+    .accessExercise a{
+        height: 32px;
+        width:75px;
+    }
+
+}
+
+
+
+@media (max-width:365px){
+    .navbar .logo a{
+        font-size: 30px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 20px;
+        line-height: 50px;
+    }
+    
+    .social_links ul li a{
+        width: 46px;
+        height: 46px;
+    }
+
+    .accessExercise{
+        width:60%;
+    }
+
+}
+
+
+@media (max-width:330px){
+
+    .accessExercise{
+        width:70%;
+    }
+
+    .exerciseX{
+        height:230px;
+    }
+}
+
+@media (max-width:310px){
+
+    .accessExercise{
+        width:77%;
+    }
+
+    footer{
+        font-size: 13px;
+    }
+
+}
+
+
+
+@media (max-width:298px){
+
+
+    .navbar .logo a{
+        font-size: 28px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 18px;
+        line-height: 48px;
+    }
+    
+    .social_links ul li a{
+        width: 44px;
+        height: 44px;
+    }
+
+    .homeIndex .max-width .text-1{
+         font-size: 22px;
+    }
+    
+    .homeIndex .max-width .text-2{
+         font-size: 40px;
+    }
+    .homeIndex .max-width .text-3{
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width:290px){
+
+    .accessExercise{
+         width:90%;
+    }
+    
+    .exerciseX{
+        height:250px;
+    }
+    
+
+    .repository .titleRepository{
+        font-size: 26px;
+    }
+}

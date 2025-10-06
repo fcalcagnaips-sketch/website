@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+
+}
+
+/* menu style*/
+.navbar{
+    position: fixed;
+    width:100%;
+    padding: 30px 0;
+    font-family: 'Raleway', sans-serif;
+    transform: all 0.4s ease;
+    z-index: 20;
+    
+
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background:rgb(12, 11, 11);
+
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar .logo a{
+    color:rgb(255, 255, 255);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color:red;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img {
+    width: 50px; /* dimensione logo */
+    height: auto;
+    margin-right: 10px; /* spazio tra immagine e testo */
+    border-radius: 50%; /* se vuoi il logo rotondo */
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+
+.navbar .menu li a{
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: color 0.4s ease;
+    position: relative;
+}
+
+.navbar .menu li a:hover{
+    color: rgb(219, 0, 0);
+}
+
+.navbar .menu li a::after{
+    content:"";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0%;
+    left:0;
+    bottom:-10px;
+    transition: ease .40s;
+}
+
+.navbar .menu li a:hover::after{
+    width:100%;
+}
+
+
+/*menu button style*/
+.menu-btn{
+    color:#fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/* home section style */
+
+.homeIndex{
+    display: flex;
+    background: black;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.homeIndex .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.homeIndex .max-width .text-1{
+    font-size: 27px;
+}
+
+.homeIndex .max-width .text-2{
+    font-size: 70px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.homeIndex .max-width .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.homeIndex .max-width .text-1 span{
+    color: red;
+}
+
+.homeIndex .max-width .text-2 span{
+    color: red;
+}
+
+.homeIndex .max-width .text-3 span{
+    color: red;
+}
+
+.social_links ul{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social_links ul li{
+    list-style: none;
+    margin: 0 10px;
+
+}
+
+.social_links ul li .fa{
+
+    font-size: 28px;
+    line-height: 58px;
+    transition: .6s;
+    color:rgb(216, 4, 4);
+    z-index: -50;
+}
+
+.social_links ul li a{
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(14, 12, 12);
+    text-align: center;
+    transition: .5s;
+    box-shadow: 0 5px 4px rgb(216, 5, 5,.7); 
+
+}
+
+
+.social_links ul li a:hover{
+    background-color:#fff;
+    transform: translate(0,-12px);
+    box-shadow: 0 5px 4px rgba(173, 138, 138, 0.7); 
+}
+
+.social_links ul li .fa:hover{
+    color:black;
+}
+
+
+/* about section style */
+
+.section{
+    padding: 100px 0;
+}
+
+.aboutIndex{
+    display: flex;
+    background: black;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+}
+
+.aboutIndex .max-width{
+    width:60%;
+}
+
+.aboutIndex .titleAbout {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid red;
+}
+
+
+
+
+
+/* skill section style */
+.skillIndex{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: white;
+    min-height: 500px;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+}
+
+.skillIndex .max-width{
+    width:70%;
+}
+
+.skillIndex .titleSkill{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid red;
+}
+
+
+/*Youtube section style*/
+
+.YoutubeIndex{
+    font-family: 'Raleway', sans-serif;
+    background: black;
+    color:#fff;
+    padding-bottom: 200px;
+    padding-top: 300px;
+    
+}
+
+.YoutubeIndex .titleYoutube{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    border-bottom: 4px solid red;
+}
+
+
+/* Float four columns side by side */
+.youtubeIndex-content .column {
+    float:left;
+    width: 33%;
+    padding: 0 10px;
+}
+
+.YoutubeIndex h2{
+    color:white;
+}
+  
+/* Remove extra left and right margins, due to padding in columns */
+.youtubeIndex-content {
+    margin: 0 -5px;
+}
+  
+/* Clear floats after the columns */
+.youtubeIndex-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Style the counter cards */
+.youtubeIndex-content .column .card {
+    text-align: center;
+    background: #111;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    
+}
+
+.youtubeIndex-content .column .card{
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 4px white;
+}
+
+.youtubeIndex-content .column:hover .card{
+    transform: scale(1.05);
+    box-shadow: 0 7px 5px red;
+}
+
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+/*footer styling*/
+footer{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    background:#111;
+    padding:10px;
+    font-size:18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+footer a{
+    color: rgb(165, 0, 0);
+    
+}
+
+
+
+/* media query responsive design */
+
+
+@media (max-width:1104px){
+    .homeIndex .max-width{
+        margin-left: 0px;
+    }
+
+
+    .skillIndex .titleSkill{
+        font-size: 35px;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+
+    .aboutIndex .titleAbout{
+        font-size: 35px;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+
+
+}
+
+
+@media (max-width:1077px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height:100vh;
+        width:100%;
+        background: black;
+        left:-100%;
+        top:0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.4s ease;
+    }
+
+    
+
+    .navbar .menu.active{
+        left:0;
+    }
+
+    .social_links.active{
+        position: fixed;
+        height:100vh;
+        width:100%;
+        background: black;
+        left:-100%;
+        top:0;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+
+
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 65px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 35px;
+    }
+
+    .youtubeIndex-content .column{
+        width: 70%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .youtubeIndex-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    
+}
+
+@media (max-width:991px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 26px;
+        line-height: 56px;
+    }
+    
+    .social_links ul li a{
+        width: 53px;
+        height: 53px;
+    }
+
+    .skillIndex .titleSkill{
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .aboutIndex .titleAbout{
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .YoutubeIndex .titleYoutube{
+        font-size: 32px;
+        font-weight: 600;
+    }
+}
+
+
+
+
+@media (max-width:889px){
+
+
+    .skillIndex .titleSkill{
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 100px;
+    }
+
+    .aboutIndex .titleAbout{
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+
+    .YoutubeIndex .titleYoutube{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    
+}
+
+
+@media (max-width:842px){
+
+    .skillIndex .max-width{
+        width:70%;
+    }
+
+    .aboutIndex .max-width{
+        width:70%;
+    }
+
+
+    .skillIndex .titleSkill{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 120px;
+    }
+
+    .aboutIndex .titleAbout{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+
+    .YoutubeIndex .titleYoutube{
+        font-size: 27px;
+        font-weight: 600;
+    }
+
+    
+
+    footer{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:763px){
+
+
+    .skillIndex .max-width{
+        width:70%;
+    }
+
+    .aboutIndex .max-width{
+        width:70%;
+    }
+
+    .skillIndex .titleSkill{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 150px;
+    }
+
+    .YoutubeIndex .titleYoutube{
+        font-size: 27px;
+        font-weight: 600;
+    }
+
+    .aboutIndex .titleAbout{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+
+    
+}
+
+@media (max-width:733px){
+
+
+    .skillIndex .titleSkill{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 200px;
+    }
+
+    .aboutIndex .titleAbout{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+
+
+    
+}
+
+@media (max-width:690px){
+
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 60px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 32px;
+    }
+    .social_links ul li .fa{
+
+        font-size: 24px;
+        line-height: 54px;
+    }
+    
+    .social_links ul li a{
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
+
+@media (max-width:538px){
+
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 50px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 27px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 22px;
+        line-height: 52px;
+    }
+    
+    .social_links ul li a{
+        width: 48px;
+        height: 48px;
+    }
+
+    .skillIndex .titleSkill{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 250px;
+    }
+
+    .youtubeIndex-content .column .card i{
+        font-size: 40px;
+    }
+    
+    .youtubeIndex-content .column .card .text{
+        font-size: 23px;
+    }
+}
+
+@media (max-width:490px){
+
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .homeIndex .max-width .text-2{
+        font-size: 50px;
+    }
+    
+    .homeIndex .max-width .text-3{
+        font-size: 27px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 22px;
+        line-height: 52px;
+    }
+    
+    .social_links ul li a{
+        width: 48px;
+        height: 48px;
+    }
+
+    .skillIndex .titleSkill{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 300px;
+    }
+
+    .aboutIndex .max-width{
+        width: 80%;
+    }
+
+    .skillIndex .max-width{
+        width:80%;
+    }
+
+}
+
+
+
+@media (max-width:410px){
+
+    .skillIndex .titleSkill{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 480px;
+    }
+
+    .social_links ul li .fa{
+
+        font-size: 20px;
+        line-height: 50px;
+    }
+    
+    .social_links ul li a{
+        width: 46px;
+        height: 46px;
+    }
+
+    .homeIndex .max-width .text-1{
+         font-size: 20px;
+    }
+    
+    .homeIndex .max-width .text-2{
+         font-size: 40px;
+    }
+    .homeIndex .max-width .text-3{
+        font-size: 20px;
+    }
+
+    
+    .logo-write{
+        font-size:30px;
+    }
+
+    .logo-img {
+        width: 40px; /* dimensione logo */
+    }
+
+}
+
+
+
+@media (max-width:342px){
+
+    .social_links ul li .fa{
+
+        font-size: 18px;
+        line-height: 45px;
+    }
+    
+    .social_links ul li a{
+        width: 42px;
+        height: 42px;
+    }
+
+    .homeIndex .max-width .text-1{
+         font-size: 17px;
+    }
+    
+    .homeIndex .max-width .text-2{
+         font-size: 35px;
+    }
+    .homeIndex .max-width .text-3{
+        font-size: 17px;
+    }
+
+    
+    .logo-write{
+        font-size:25px;
+    }
+
+    .logo-img {
+        width: 35px; /* dimensione logo */
+    }
+
+}
+
+@media (max-width:329px){
+    .skillIndex .titleSkill{
+        font-size: 27px;
+        font-weight: 600;
+        padding-top: 580px;
+    }
+
+}
+
+@media (max-width:322px){
+    .titleYoutube{
+        padding-top: 1000px;
+    }
+
+    .YoutubeIndex{
+        padding-top: 100px;
+    }
+}
+
+@media (max-width:310px){
+    .YoutubeIndex{
+        padding-top: 200px;
+    }
+}
+
